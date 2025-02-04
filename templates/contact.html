@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Empty HTML Page</title>
+    
+</head>
+
+<body>
+    <form method="post" action="/contact">
+      {% csrf_token %}
+        <div class="mb-0">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name">
+          </div>
+        <div class="mb-0">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="email">
+        </div>
+        <div class="mb-0">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Your Phone Number">
+          </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Enquiry</label>
+            <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      
+</body>
+
+</html>
+
+{% endblock body %}
